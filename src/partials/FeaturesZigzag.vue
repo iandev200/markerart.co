@@ -27,7 +27,7 @@
             >
               <img
                 class="max-w-full mx-auto md:max-w-none h-auto"
-                src="../images/1 (1).png"
+                src="../images/1real.png"
                 width="130"
                 height=""
                 alt="Features 01"
@@ -100,7 +100,7 @@
             >
               <img
                 class="max-w-full mx-auto md:max-w-none h-auto"
-                src="../images/2 (1).png"
+                src="../images/2real.png"
                 width="200"
                 height="auto"
                 alt="Features 02"
@@ -173,7 +173,7 @@
             >
               <img
                 class="max-w-full mx-auto md:max-w-none h-auto"
-                src="../images/3 (1).png"
+                src="../images/3real.png"
                 width="200"
                 height="auto"
                 alt="Features 03"
