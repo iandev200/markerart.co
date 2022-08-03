@@ -2,7 +2,7 @@
   <section>
     <div class="max-w-6xl mx-auto px-4 sm:px-6 relative">
       <!-- Illustration behind hero content -->
-      <div
+      <!-- <div
         class="absolute left-0 bottom-0 -ml-20 hidden lg:block pointer-events-none"
         aria-hidden="true"
         data-aos="fade-up"
@@ -36,7 +36,7 @@
             fill="url(#illustration-02)"
           />
         </svg>
-      </div>
+      </div> -->
 
       <!-- Hero content -->
       <div class="relative pt-32 pb-10 md:pt-40 md:pb-16">

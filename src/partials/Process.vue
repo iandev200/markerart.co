@@ -27,7 +27,12 @@
             Being an artist is tough. We get it.
           </h2>
         </div>
-        <div class="max-w-3xl mx-auto my-40 text-center md:pb-20"></div>
+        <div class="max-w-3xl mx-auto my-40 text-center md:pb-20">
+          <h2 class="h2 mb-4" data-aos="fade-up" data-aos-delay="400">
+            Creativity is equally as vital to ourselves as it is to the world
+            around us.
+          </h2>
+        </div>
 
         <!-- Items -->
         <div
@@ -73,8 +78,8 @@
               />
             </svg> -->
             <h4 class="h4 mb-2 text-center">
-              <span class="text-gray-400"></span>Creativity is equally as vital
-              to ourselves as it is to the world around us.
+              <span class="text-gray-400"></span>We are not promoting trends or
+              relying on rationale.
             </h4>
             <!-- <p class="text-lg text-gray-400 text-center">
               Creativity is equally as vital to ourselves as it is to the world
@@ -126,8 +131,8 @@
               </g>
             </svg> -->
             <h4 class="h4 mb-2 text-center">
-              <span class="text-gray-400"></span>We are not promoting trends or
-              relying on rationale.
+              <span class="text-gray-400"></span>We are harnessing our
+              intuition...
             </h4>
             <!-- <p class="text-lg text-gray-400 text-center">
               We are not promoting trends or relying on rationale.
@@ -167,7 +172,7 @@
               />
             </svg> -->
             <h4 class="h4 mb-2 text-center">
-              <span class="text-gray-400"></span>We are harnessing our intuition
+              <span class="text-gray-400"></span>
               while simultaneously building trust in our instincts.
             </h4>
             <!-- <p class="text-lg text-gray-400 text-center">
