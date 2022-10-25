@@ -17,7 +17,7 @@
         <div class="max-w-6xl mx-auto px-4 sm:px-6 relative">
           <div class="pt-32 pb-12 md:pt-40 md:pb-20">
             <!-- Contact form -->
-            <form ref="form" class="max-w-xl mx-auto">
+            <form @submit="onSubmit" ref="form" class="max-w-xl mx-auto">
               <div class="flex flex-wrap -mx-3 mb-4">
                 <div class="w-full px-3">
                   <label
@@ -32,7 +32,7 @@
                     type="text"
                     class="form-input w-full text-gray-300"
                     placeholder="Enter your first name"
-                    :rules="nameRules"
+                    :rules="validateName"
                   />
                 </div>
               </div>
@@ -50,7 +50,7 @@
                     type="email"
                     class="form-input w-full text-gray-300"
                     placeholder="Enter your email address"
-                    :rules="emailRules"
+                    :rules="validateEmail"
                   />
                 </div>
               </div>
@@ -97,41 +97,37 @@ import CtaContact from "../partials/CtaContact.vue";
 import Footer from "../partials/Footer.vue";
 import db from "../firebase";
 import { collection, addDoc } from "firebase/firestore";
+import { Form, Field } from "vee-validate";
 
 export default {
   name: "Questionnaire",
   components: {
+    Form,
+    Field,
     Header,
     PageIllustration,
     CtaContact,
     Footer,
+    ErrorMessage,
   },
   methods: {
-    async submit() {
-      if (!this.$refs.form.validate()) {
-        return;
-      }
-      const docRef = await addDoc(collection(db, "leads"), {
-        name: this.name,
-        email: this.email,
-        message: this.message,
-      });
-      console.log("Document written with ID: ", docRef.id);
+    onSubmit(values) {
+      console.log(values, null, 2);
     },
-  },
-  data() {
-    return {
-      valid: true,
-      name: "",
-      nameRules: [(v) => !!v || "Name is required"],
-      email: "",
-      emailRules: [
-        (v) => !!v || "E-mail is required",
-        (v) => /.+@.+\..+/.test(v) || "E-mail must be valid",
-      ],
-      message: "",
-      req: [(v) => !!v || "Field is required"],
-    };
+    validateEmail(value) {
+      // if the field is empty
+      if (!value) {
+        return "This field is required";
+      }
+
+      // if the field is not a valid email
+      const regex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
+      if (!regex.test(value)) {
+        return "This field must be a valid email";
+      }
+      // All is good
+      return true;
+    },
   },
 };
 </script>
