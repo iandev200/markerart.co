@@ -101,6 +101,7 @@ import Footer from "../partials/Footer.vue";
 import { db } from "../firebase";
 import { collection, addDoc } from "firebase/firestore";
 import { useField, useForm } from "vee-validate";
+import { required } from "@vee-validate/rules";
 
 export default {
   name: "Questionnaire",
@@ -110,8 +111,11 @@ export default {
     CtaContact,
     Footer,
   },
+
   setup() {
     const { errors, values, validate, resetForm, handleSubmit } = useForm();
+
+    defineRule("required", required);
 
     async function submit() {
       try {

@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "@tailwindcss/forms": "^0.4.0",
+    "@vee-validate/rules": "^4.11.0",
     "aos": "^3.0.0-beta.6",
     "firebase": "^9.23.0",
     "vee-validate": "^4.10.7",

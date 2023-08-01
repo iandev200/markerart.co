@@ -2,7 +2,6 @@ import { createApp } from "vue";
 import router from "./router";
 import App from "./App.vue";
 import { Field, Form, ErrorMessage, defineRule, configure } from "vee-validate";
-import { required, email } from "@vee-validate/rules";
 
 // Use the Vee-Validate components
 const app = createApp(App);
