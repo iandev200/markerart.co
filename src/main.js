@@ -1,18 +1,6 @@
 import { createApp } from "vue";
 import router from "./router";
-import App from "./App.vue";
 import { Field, Form, ErrorMessage, defineRule, configure } from "vee-validate";
-
-// Use the Vee-Validate components
-const app = createApp(App);
-app.use(router);
-app.component("Form", Form);
-app.component("Field", Field);
-app.component("ErrorMessage", ErrorMessage);
-
-// Define the validation rules and messages
-defineRule("required", required);
-defineRule("email", email);
 
 // Configure the validation messages
 configure({
@@ -25,5 +13,3 @@ configure({
     return message ? message : `The ${context.field} field is invalid.`;
   },
 });
-
-app.mount("#app");
